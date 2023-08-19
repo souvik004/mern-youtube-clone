@@ -37,7 +37,7 @@ const SideMenu = ({Icon, title, onThemeChange, type, link}) => {
           : 
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <Logo>
-              <Img src={logo} />SouvikTube
+              <Img src={logo} />SouvikPalTube
             </Logo>
           </Link>
         }

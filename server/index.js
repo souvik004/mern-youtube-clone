@@ -14,12 +14,13 @@ import './config/passport.js'
 import googleRouter from './routes/googleAuth.js'
 import cookieSession from 'cookie-session'
 import helmet from 'helmet'
+import morgan from 'morgan'
 // import google from './config/google.js'
 
 const app = express()
 dotenv.config()
 const port = process.env.PORT || 3500
-
+console.log("from server, ", process.env.MONGO_URI)
 connectDB()
 
 // app.use(session({
@@ -45,6 +46,7 @@ app.use(cors({
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }))
+app.use(morgan('dev'))
 app.use(helmet())
 
 app.use(passport.initialize())
