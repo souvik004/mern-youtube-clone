@@ -120,11 +120,6 @@ const Login = () => {
       </Wrapper>
       <More>
         English(USA)
-        {/* <Links>
-          <Link>Help</Link>
-          <Link>Privacy</Link>
-          <Link>Terms</Link>
-        </Links> */}
       </More>
     </Container>
   )

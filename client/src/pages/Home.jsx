@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { apiPublicRequest } from '../apiRequest';
 import Card from '../components/Card';
 import useAxiosPrivate from '../hooks/useAxiosPrivate';
+import Greet from '../components/Greet/Greet';
 
 const Container = styled.div`
   display: flex;
@@ -59,6 +60,7 @@ const Home = ({type}) => {
   
   return (
     <Container>
+      <Greet />
       {videos?.map((video) => (
         <Card key={video._id} video={video} />
       ))}
